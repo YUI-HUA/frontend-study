@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟表</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            position: relative;
+            background-image: url(./photos/13.clock/bg.png);
+            background-size: cover;
+        }
+
+    .clock>div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    .hour-wrapper{
+        width: 70%;
+        height: 70%;
+        animation: clock 7200s linear infinite;
+    }
+    .hour{
+        height: 50%;
+        width: 6px;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .min-wrapper{
+        width: 75%;
+        height: 75%;
+        animation: clock 600s steps(60) infinite;
+    }
+    .min{
+        height: 50%;
+        width: 4px;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .sec-wrapper{
+        width: 80%;
+        height: 80%;
+        animation: clock 10s steps(60) infinite;
+    }
+    .sec{
+        height: 50%;
+        width: 3px;
+        background-color: red;
+        margin: 0 auto;
+    }
+    @keyframes clock {
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour-wrapper">
+            <div class="hour"></div>
+        </div>
+        <div class="min-wrapper">
+            <div class="min"></div>
+        </div>
+        <div class="sec-wrapper">
+            <div class="sec"></div>
+        </div>
+    </div>
+</body>
+</html>
